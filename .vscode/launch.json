@@ -1,7 +1,7 @@
 {
     "configurations": [
       {
-       // "name": "Python Debug",
+        "name": "Python Debug",
         "type": "python",
         "request": "launch",
         "program": "${file}",
