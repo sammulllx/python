@@ -12,5 +12,6 @@
   // Whether to clear previous output before each run.
   "code-runner.clearPreviousOutput": true, // 每次run code前清空属于code runner的终端消息，默认false
   // Whether to ignore selection to always run entire file.
-  "code-runner.ignoreSelection": false, // 只跑选中的n行代码
+  "code-runner.ignoreSelection": false,
+  "lldb.launch.terminal": "external", // 只跑选中的n行代码
   }

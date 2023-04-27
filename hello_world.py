@@ -8,9 +8,9 @@ print("Current python path:")
 print(sys.executable)
 print("dddd")
 
-a=1
+a = 1
 print(a)
-b =2
+b = 2
 c = a+b
 print(c)
 name = input("Please input your name: ")
