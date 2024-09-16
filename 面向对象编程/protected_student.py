@@ -25,6 +25,6 @@ bart.set_score(100)
 print(bart.get_name())
 print(bart.get_score())
 
-
+# 不推荐用这种方式调用函数
 print(Student.get_name(bart))
 print(Student.get_score(bart))
