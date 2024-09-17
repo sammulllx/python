@@ -5,7 +5,7 @@ class Animal(object):
 
 class Dog(Animal):  # 继承
 
-    def run(self):  # 多态
+    def run(self):  # 多态 当子类和父类都存在相同的run()方法时，我们说，子类的run()覆盖了父类的run()
         print('Dog is running...')
 
     def eat(self):
@@ -27,9 +27,9 @@ class Timer(object):
         print('Start...')
 
 
-def run_twice(animal):
-    animal.run()
-    animal.run()
+def run_twice(a):
+    a.run()
+    a.run()
 
 
 dog = Dog()
