@@ -1,0 +1,7 @@
+# -*- encoding: gbk -*-
+# s = "?¡¦¡¦?"
+# print(s)
+
+s = 'ÄãºÃ'
+print(s)
+print(s.encode('utf-8'))
