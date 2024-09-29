@@ -9,13 +9,26 @@ class Student(object):
     def get_grade(self):
         if self.score >= 90:
             return 'A'
-        elif self.score >=60:
+        elif self.score >= 60:
             return 'B'
         else:
-            return  'C'
+            return 'C'
+
+    @staticmethod
+    def static_method():
+        print('static method work')
+
+
+print('Student id is %d' % id(Student))
+print('Student method id is %d', id(Student.static_method))
+
+print("*"*10)
+
 # 1.通过实例调用方法：
 # 正确的方式是通过实例对象调用 print_score 方法，这样 self 会自动绑定为实例对象。
 lisa = Student('Lisa', 99)
+print('Lisa method id is %d', id(lisa.static_method))
+
 bart = Student('Bart', 59)
 bart.print_score()
 lisa.print_score()
@@ -24,6 +37,5 @@ lisa.print_score()
 Student.print_score(bart)
 Student.print_score(lisa)
 
-print(bart.name,bart.get_grade())
-print(lisa.name,lisa.get_grade())
-
+print(bart.name, bart.get_grade())
+print(lisa.name, lisa.get_grade())
