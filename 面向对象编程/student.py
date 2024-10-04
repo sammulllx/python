@@ -30,6 +30,7 @@ lisa = Student('Lisa', 99)
 print('Lisa method id is %d', id(lisa.static_method))
 
 bart = Student('Bart', 59)
+Student.print_score(bart)
 bart.print_score()
 lisa.print_score()
 # 通过类调用，但传入实例（不推荐）：
@@ -39,3 +40,5 @@ Student.print_score(lisa)
 
 print(bart.name, bart.get_grade())
 print(lisa.name, lisa.get_grade())
+
+print(Student.__class__)

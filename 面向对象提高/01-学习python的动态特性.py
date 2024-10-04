@@ -13,8 +13,10 @@ class Person(object):
 p = Person("小明", "24")
 p.habbit = 'football'
 Person.sex = None  # 给类Person添加一个属性
+setattr(p, 'grade', 99)
 print(p.habbit)
 print(p.sex)
+print(p.grade)
 
 p.eat()
 

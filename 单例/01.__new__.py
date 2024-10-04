@@ -2,7 +2,7 @@ class Player:
     __instance = None
     __flag = False
 
-    def __new__(cls, *args, **kwargs):  # 静态方法
+    def __new__(cls, *args, **kwargs):  # 静态方法 new在init前执行 返回一个实例对象
         print("new执行了")
         if cls.__instance is None:
             cls.__instance = super().__new__(cls)

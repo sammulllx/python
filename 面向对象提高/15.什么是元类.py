@@ -12,3 +12,7 @@ print('---')
 print(hasattr(ObjectCreator, 'new_attribute'))
 ObjectCreator.new_attribute = 'foo'  # 为类增加属性
 print(hasattr(ObjectCreator, 'new_attribute'))
+
+print(hasattr(a, 'new_attribute'))
+del A.new_attribute
+print(hasattr(a, 'new_attribute'))
