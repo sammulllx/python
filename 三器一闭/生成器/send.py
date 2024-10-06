@@ -30,5 +30,6 @@ def generator_test():
 
 g = generator_test()
 
-print(g.send(None))  # 可以将这行屏蔽，看看不同
+print(next(g))
+# print(g.send(None))  # 可以将这行屏蔽，看看不同
 print(g.send(11))

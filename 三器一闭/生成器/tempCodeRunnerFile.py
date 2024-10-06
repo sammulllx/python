@@ -1,1 +1,1 @@
-None
+print(g.send(None))  # 可以将这行屏蔽，看看不同
