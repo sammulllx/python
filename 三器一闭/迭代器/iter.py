@@ -26,7 +26,7 @@ class MyIterator(object):
             self.current += 1
             return item
         else:
-            raise StopIteration
+            raise StopIteration("没了")
         # for 循环捕获到这个异常后，会自动停止循环，而不会显示异常信息。
 
     def __iter__(self):
@@ -40,11 +40,23 @@ if __name__ == '__main__':
     mylist.add(3)
     mylist.add(4)
     mylist.add(5)
-    for num in mylist:
-        print(num)
-    # myiterator = iter(mylist)
-    # try:
-    #     while True:
-    #         print(next(myiterator))
-    # except StopIteration as e:
-    #     print(f'Stopped: {e}')
+    # 在 for num in mylist 中，print 打印的是 MyIterator 的 __next__ 返回的元素值，而不是 MyList 对象本身
+    # for num in mylist:
+    #     print(num)
+
+    myiterator = iter(mylist)
+    try:
+        while True:
+            print(next(myiterator))
+    except StopIteration as e:
+        print(f'Stopped: {e}')
+
+    # iterator = iter(mylist)  # 手动获取迭代器
+    # print(next(iterator))    # 输出 1
+    # print(next(iterator))    # 输出 2
+    # print(next(iterator))
+    # print(next(iterator))
+    # print(next(iterator))
+    # print(next(iterator))
+
+    print('end')

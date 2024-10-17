@@ -32,3 +32,5 @@ if __name__ == '__main__':
     print('父进程pid: %d' % os.getpid())  # os.getpid获取当前进程的进程号
     p = Process(target=run_proc)
     p.start()
+    time.sleep(1)
+    print("主进程结束")
